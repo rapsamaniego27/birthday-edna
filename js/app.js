@@ -53,19 +53,22 @@ class Countdown{
   
   this.displayTime(values);
   
-/*   if(timeDiff < 0 ){ */
+  if(timeDiff < 0 ){
    clearInterval(this.countdownInterval);
    deadline.innerHTML = ``;
    const pageTitle = document.querySelector('#pageTitle');
+   const body = document.querySelector('body');
+   
 
    pageTitle.innerHTML = `Birthday Poem <br> for Edna`;
    document.querySelector('.deadline-meta').classList.add('meta--hide');
    document.querySelector('.date-poem').classList.remove('meta--hide');
    document.querySelector('.cake').classList.remove('meta--hide');
    document.querySelector('.announcement').classList.add('meta--hide');
+   body.classList.remove('body-flex');
    
 
-/*   } */
+  }
  }
 
  /* Displays in front end */
